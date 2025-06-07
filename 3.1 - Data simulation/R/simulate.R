@@ -21,8 +21,8 @@ mu_Trust_base <- c(low = 4.4,  baseline = 4.7, high = 4.2)
 # boost_low_male_Trust <-  +0.40
 
 # To see differences more clearly in inspect plots
-boost_low_male_WOA   <-  +0.3
-boost_low_male_Trust <-  +1
+boost_low_male_WOA   <-  +0.1
+boost_low_male_Trust <-  +0.6
 
 ## -------------------- helper -------------------------------------------------
 simulate_scenario <- function(mu_WOA_vec    = mu_WOA_base,
@@ -143,4 +143,10 @@ scenario3_df <- simulate_scenario(
 )
 inspect_design(scenario3_df, "scenario 3")
 
+# Save the scenarios
+write.csv(scenario1_df, "output/scenario1.csv")
+write.csv(scenario2_df, "output/scenario2.csv")
+write.csv(scenario3_df, "output/scenario3.csv")
 
+# Save the chosen scenario 1 to the 3.2 folder
+write.csv(scenario1_df, "../3.2 - Data analysis/input/scenario1.csv", row.names=F)
