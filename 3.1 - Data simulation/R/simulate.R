@@ -13,8 +13,8 @@ edu_lvls  <- c("none", "highschool", "college")
 trials    <- 1:10
 
 # scenario 1 specific variables
-mu_WOA_base <- c(low = .50, baseline = 0.70, high = 0.30)
-mu_Trust_base <- c(low = 4.4,  baseline = 4.7, high = 4.2)
+mu_WOA_base <- c(low = .50, baseline = 0.80, high = 0.30)
+mu_Trust_base <- c(low = 4.4,  baseline = 5.1, high = 4.2)
 
 # Original
 # boost_low_male_WOA   <-  +0.05
@@ -22,7 +22,7 @@ mu_Trust_base <- c(low = 4.4,  baseline = 4.7, high = 4.2)
 
 # To see differences more clearly in inspect plots
 boost_low_male_WOA   <-  +0.1
-boost_low_male_Trust <-  +0.6
+boost_low_male_Trust <-  +0.4
 
 ## -------------------- helper -------------------------------------------------
 simulate_scenario <- function(mu_WOA_vec    = mu_WOA_base,
