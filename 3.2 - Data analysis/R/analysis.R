@@ -6,13 +6,6 @@ library(emmeans, include.only("emmeans", "contrast"))
 import::from(multcomp, glht, mcp, adjusted, cld, contrMat)
 import::from(car, sigmaHat)
 
-theme_minimal <- theme(
-  text = element_text(size = 10),
-  axis.title = element_text(size = 6),
-  axis.text = element_text(size = 6),
-  plot.title = element_text(size = 8, face = "bold")
-)
-
 # Load data scenario 1
 df = read_csv("input/scenario1.csv")
 
@@ -153,7 +146,7 @@ plot_connected_means_summarised(df)
 
 ###
 # H1: The trust measured will be highest in the baseline condition, regardless of gender
-# Since we are specifically not intersted in interaction effects, we will fit a simple model without interaction
+# Since we are specifically not interested in interaction effects, we will fit a simple model without interaction
 # To control for gender effects, we will have it as a simple main effect though
 
 # Fit a linear models that incorporates condition but no interaction effects
